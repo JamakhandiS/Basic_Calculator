@@ -1,5 +1,4 @@
 # Basic_Calculator
-------------------HTML CODE start----------------------
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,66 +44,5 @@
 </body>
 </html>
 
------------------------HTML CODE END--------------------
-
-------------------------CSS CODE START-------------------
-
-***********style.css file***************
-html body{
-    height: 100%;
-    width:100%;
-}
-
-.button{
-    padding: 10px;
-    margin: 1px 3px;
-    border-radius:5px;
-    border-width: 1px;
-    height: 40px;
-    width: 40px;
-    font-size: 18px;
-    font-style: inherit;
-}
-.row{
-    margin:8px 0;
-}
-.row input{
-    margin: 0;
-    border: 2px solid;
-    border-radius: 8px;
-    padding: 4px 3px;
-    font-size: 20px;
-    width: 140px;
-}
-
-********util.css file***********
 
 
-_-----------------------CSS code END------------------
-
-
------------------------JS CODE START------------------
-let string="";
-let buttons= document.querySelectorAll('.button');
-Array.from(buttons).forEach((button)=>{
-    button.addEventListener('click',(e)=>{
-        if(e.target.innerHTML == '='){
-            string =eval(string);
-            document.querySelector('input').value = string;
-        }
-        else if(e.target.innerHTML == 'AC'){
-            string ="";
-            document.querySelector('input').value = string;
-        }
-        else if(e.target.innerHTML == 'X'){
-            string =e.target.innerHTML*e.target.innerHTML;
-            document.querySelector('input').value = string;
-        }
-        else{
-        console.log(e.target)
-        string = string + e.target.innerHTML;
-        document.querySelector('input').value = string;
-        }
-    })
-})
---------------------JS code END----------------------------
